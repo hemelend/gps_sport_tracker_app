@@ -76,9 +76,9 @@ $cakeDescription = 'GPS Sports Tracker -- v0.1';
         <figure class="logo animated fadeInDown delay-07s">
             <a href="#"><img src="img/logo.png" alt=""></a>
         </figure>
-        <h1 class="animated fadeInDown delay-07s">Welcome To Knight Studios</h1>
+        <h1 class="animated fadeInDown delay-07s">Welcome To GPS Sport Tracker</h1>
         <ul class="we-create animated fadeInUp delay-1s">
-            <li>We are a digital agency that loves crafting beautiful websites.</li>
+            <li>We are a digital company that loves helping athlets to improve their physical conditions.</li>
         </ul>
             <a class="link animated fadeInUp delay-1s servicelink" href="#service">Get Started</a>
     </div>
