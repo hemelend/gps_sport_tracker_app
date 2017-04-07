@@ -21,9 +21,9 @@ use Cake\Network\Exception\NotFoundException;
 
 $this->layout = false;
 
-if (!Configure::read('debug')):
-    throw new NotFoundException('Please replace src/Template/Pages/home.ctp with your own version.');
-endif;
+// if (!Configure::read('debug')):
+//     throw new NotFoundException('Please replace src/Template/Pages/home.ctp with your own version.');
+// endif;
 
 $cakeDescription = 'GPS Sports Tracker -- v0.1';
 ?>
@@ -400,7 +400,7 @@ we were well fed and drunk all the time!</p>
 <footer class="footer">
     <div class="container">
         <div class="footer-logo"><a href="#"><img src="img/footer-logo.png" alt=""></a></div>
-        <span class="copyright">&copy; Knight Theme. All Rights Reserved</span>
+        <span class="copyright">&copy; GPS Sports Tracker. All Rights Reserved</span>
         <div class="credits">
             <!--
                 All the links in the footer should remain intact.

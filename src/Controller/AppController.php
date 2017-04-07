@@ -43,13 +43,24 @@ class AppController extends Controller
 
         $this->loadComponent('RequestHandler');
         $this->loadComponent('Flash');
+        $this->loadComponent('Auth', [
+            'loginRedirect' => [
+                'controller' => 'Users',
+                'action' => 'index'
+            ],
+            'logoutRedirect' => [
+                'controller' => 'Pages',
+                'action' => 'display',
+                'home'
+            ]
+        ]);
 
         /*
          * Enable the following components for recommended CakePHP security settings.
          * see http://book.cakephp.org/3.0/en/controllers/components/security.html
          */
-        //$this->loadComponent('Security');
-        //$this->loadComponent('Csrf');
+        $this->loadComponent('Security');
+        $this->loadComponent('Csrf');
     }
 
     /**
@@ -66,6 +77,23 @@ class AppController extends Controller
             $this->set('_serialize', true);
         }
     }
+
+    public function beforeFilter(Event $event)
+    {
+        $this->Auth->allow(['display']);
+    }
+
+    public function isAuthorized($user)
+{
+    // Admin can access every action
+    if (isset($user['role']) && $user['role'] === 'admin') {
+        return true;
+    }
+
+    // Default deny
+    return false;
+}
+
     // Bootstrap Frameworks
     public $helpers = [
         'Form' => [
