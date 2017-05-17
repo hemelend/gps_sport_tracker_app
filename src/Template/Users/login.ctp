@@ -83,25 +83,19 @@ form[role=login] {
     <div class="col-md-4"></div>
 
     <div class="col-md-4">
+      <?= $this->Flash->render() ?>
       <section class="login-form">
-        <form method="post" action="#" role="login">
-        <!-- <?= $this->Form->create($user) ?> -->
+        <?= $this->Form->create() ?>
           <img src="http://i.imgur.com/RcmcLv4.png" class="img-responsive" alt="" />
-          <input type="email" name="email" placeholder="Email" required class="form-control input-lg" value="joestudent@gmail.com" />
-
-          <input type="password" class="form-control input-lg" id="password" placeholder="Password" required="" />
-
-
+          <?= $this->Form->control('email', ['label' => false, 'required' => true, 'type' => 'email',  'placeholder' => 'Email', 'class' => 'form-control input-lg']) ?>
+          <?= $this->Form->control('password', ['label' => false,  'required' => true, 'type' => 'password',  'placeholder' => 'Password', 'class' => 'form-control input-lg']) ?>
           <div class="pwstrength_viewport_progress"></div>
-
-
-          <button type="submit" name="go" class="btn btn-lg btn-primary btn-block">Sign in</button>
+          <?= $this->Form->button('Sign In', ['label' => false, 'type' => 'submit', 'class' => 'btn btn-lg btn-primary btn-block']) ?>
           <div>
             <a href="#">Create account</a> or <a href="#">reset password</a>
           </div>
 
-        </form>
-        <!-- <?= $this->Form->end() ?> -->
+        <?= $this->Form->end() ?>
 
         <div class="form-links">
           <a href="#">www.website.com</a>

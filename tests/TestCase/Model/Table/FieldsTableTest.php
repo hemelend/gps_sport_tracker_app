@@ -1,22 +1,22 @@
 <?php
 namespace App\Test\TestCase\Model\Table;
 
-use App\Model\Table\UsersTable;
+use App\Model\Table\FieldsTable;
 use Cake\ORM\TableRegistry;
 use Cake\TestSuite\TestCase;
 
 /**
- * App\Model\Table\UsersTable Test Case
+ * App\Model\Table\FieldsTable Test Case
  */
-class UsersTableTest extends TestCase
+class FieldsTableTest extends TestCase
 {
 
     /**
      * Test subject
      *
-     * @var \App\Model\Table\UsersTable
+     * @var \App\Model\Table\FieldsTable
      */
-    public $Users;
+    public $Fields;
 
     /**
      * Fixtures
@@ -24,7 +24,17 @@ class UsersTableTest extends TestCase
      * @var array
      */
     public $fixtures = [
-        'app.users'
+        'app.fields',
+        'app.cities',
+        'app.events',
+        'app.event_types',
+        'app.weathers',
+        'app.teams',
+        'app.equipments',
+        'app.players',
+        'app.positions',
+        'app.legs',
+        'app.tracks'
     ];
 
     /**
@@ -35,8 +45,8 @@ class UsersTableTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $config = TableRegistry::exists('Users') ? [] : ['className' => 'App\Model\Table\UsersTable'];
-        $this->Users = TableRegistry::get('Users', $config);
+        $config = TableRegistry::exists('Fields') ? [] : ['className' => 'App\Model\Table\FieldsTable'];
+        $this->Fields = TableRegistry::get('Fields', $config);
     }
 
     /**
@@ -46,7 +56,7 @@ class UsersTableTest extends TestCase
      */
     public function tearDown()
     {
-        unset($this->Users);
+        unset($this->Fields);
 
         parent::tearDown();
     }
@@ -79,15 +89,5 @@ class UsersTableTest extends TestCase
     public function testBuildRules()
     {
         $this->markTestIncomplete('Not implemented yet.');
-    }
-
-    /**
-     *
-     *
-     */
-    public function testIfWeGetRrdAsLastRegisteredUser(){
-        $actual = $this->Users->getLastRegistered();
-        $expected = 'rrd';
-        $this->assertEquals($expected,$actual->username);
     }
 }

@@ -1,22 +1,22 @@
 <?php
 namespace App\Test\TestCase\Model\Table;
 
-use App\Model\Table\UsersTable;
+use App\Model\Table\LegsTable;
 use Cake\ORM\TableRegistry;
 use Cake\TestSuite\TestCase;
 
 /**
- * App\Model\Table\UsersTable Test Case
+ * App\Model\Table\LegsTable Test Case
  */
-class UsersTableTest extends TestCase
+class LegsTableTest extends TestCase
 {
 
     /**
      * Test subject
      *
-     * @var \App\Model\Table\UsersTable
+     * @var \App\Model\Table\LegsTable
      */
-    public $Users;
+    public $Legs;
 
     /**
      * Fixtures
@@ -24,7 +24,7 @@ class UsersTableTest extends TestCase
      * @var array
      */
     public $fixtures = [
-        'app.users'
+        'app.legs'
     ];
 
     /**
@@ -35,8 +35,8 @@ class UsersTableTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $config = TableRegistry::exists('Users') ? [] : ['className' => 'App\Model\Table\UsersTable'];
-        $this->Users = TableRegistry::get('Users', $config);
+        $config = TableRegistry::exists('Legs') ? [] : ['className' => 'App\Model\Table\LegsTable'];
+        $this->Legs = TableRegistry::get('Legs', $config);
     }
 
     /**
@@ -46,7 +46,7 @@ class UsersTableTest extends TestCase
      */
     public function tearDown()
     {
-        unset($this->Users);
+        unset($this->Legs);
 
         parent::tearDown();
     }
@@ -79,15 +79,5 @@ class UsersTableTest extends TestCase
     public function testBuildRules()
     {
         $this->markTestIncomplete('Not implemented yet.');
-    }
-
-    /**
-     *
-     *
-     */
-    public function testIfWeGetRrdAsLastRegisteredUser(){
-        $actual = $this->Users->getLastRegistered();
-        $expected = 'rrd';
-        $this->assertEquals($expected,$actual->username);
     }
 }

@@ -1,22 +1,22 @@
 <?php
 namespace App\Test\TestCase\Model\Table;
 
-use App\Model\Table\UsersTable;
+use App\Model\Table\EventTypesTable;
 use Cake\ORM\TableRegistry;
 use Cake\TestSuite\TestCase;
 
 /**
- * App\Model\Table\UsersTable Test Case
+ * App\Model\Table\EventTypesTable Test Case
  */
-class UsersTableTest extends TestCase
+class EventTypesTableTest extends TestCase
 {
 
     /**
      * Test subject
      *
-     * @var \App\Model\Table\UsersTable
+     * @var \App\Model\Table\EventTypesTable
      */
-    public $Users;
+    public $EventTypes;
 
     /**
      * Fixtures
@@ -24,7 +24,8 @@ class UsersTableTest extends TestCase
      * @var array
      */
     public $fixtures = [
-        'app.users'
+        'app.event_types'
+        // 'app.events'
     ];
 
     /**
@@ -35,8 +36,8 @@ class UsersTableTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $config = TableRegistry::exists('Users') ? [] : ['className' => 'App\Model\Table\UsersTable'];
-        $this->Users = TableRegistry::get('Users', $config);
+        $config = TableRegistry::exists('EventTypes') ? [] : ['className' => 'App\Model\Table\EventTypesTable'];
+        $this->EventTypes = TableRegistry::get('EventTypes', $config);
     }
 
     /**
@@ -46,7 +47,7 @@ class UsersTableTest extends TestCase
      */
     public function tearDown()
     {
-        unset($this->Users);
+        unset($this->EventTypes);
 
         parent::tearDown();
     }
@@ -79,15 +80,5 @@ class UsersTableTest extends TestCase
     public function testBuildRules()
     {
         $this->markTestIncomplete('Not implemented yet.');
-    }
-
-    /**
-     *
-     *
-     */
-    public function testIfWeGetRrdAsLastRegisteredUser(){
-        $actual = $this->Users->getLastRegistered();
-        $expected = 'rrd';
-        $this->assertEquals($expected,$actual->username);
     }
 }

@@ -1,22 +1,22 @@
 <?php
 namespace App\Test\TestCase\Model\Table;
 
-use App\Model\Table\UsersTable;
+use App\Model\Table\EquipmentsTable;
 use Cake\ORM\TableRegistry;
 use Cake\TestSuite\TestCase;
 
 /**
- * App\Model\Table\UsersTable Test Case
+ * App\Model\Table\EquipmentsTable Test Case
  */
-class UsersTableTest extends TestCase
+class EquipmentsTableTest extends TestCase
 {
 
     /**
      * Test subject
      *
-     * @var \App\Model\Table\UsersTable
+     * @var \App\Model\Table\EquipmentsTable
      */
-    public $Users;
+    public $Equipments;
 
     /**
      * Fixtures
@@ -24,7 +24,17 @@ class UsersTableTest extends TestCase
      * @var array
      */
     public $fixtures = [
-        'app.users'
+        'app.equipments',
+        // 'app.event_types',
+        // 'app.fields',
+        // 'app.cities',
+        // 'app.teams',
+        // 'app.weathers',
+        // 'app.players',
+        // 'app.positions',
+        // 'app.legs',
+        // 'app.events',
+        // 'app.tracks'
     ];
 
     /**
@@ -35,8 +45,8 @@ class UsersTableTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $config = TableRegistry::exists('Users') ? [] : ['className' => 'App\Model\Table\UsersTable'];
-        $this->Users = TableRegistry::get('Users', $config);
+        $config = TableRegistry::exists('Equipments') ? [] : ['className' => 'App\Model\Table\EquipmentsTable'];
+        $this->Equipments = TableRegistry::get('Equipments', $config);
     }
 
     /**
@@ -46,7 +56,7 @@ class UsersTableTest extends TestCase
      */
     public function tearDown()
     {
-        unset($this->Users);
+        unset($this->Equipments);
 
         parent::tearDown();
     }
@@ -79,15 +89,5 @@ class UsersTableTest extends TestCase
     public function testBuildRules()
     {
         $this->markTestIncomplete('Not implemented yet.');
-    }
-
-    /**
-     *
-     *
-     */
-    public function testIfWeGetRrdAsLastRegisteredUser(){
-        $actual = $this->Users->getLastRegistered();
-        $expected = 'rrd';
-        $this->assertEquals($expected,$actual->username);
     }
 }

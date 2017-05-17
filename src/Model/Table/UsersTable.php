@@ -53,21 +53,15 @@ class UsersTable extends Table
 
         $validator
             ->requirePresence('username', 'create')
-            ->notEmpty('username', 'A username is required');
+            ->notEmpty('username');
 
         $validator
             ->requirePresence('password', 'create')
-            ->notEmpty('password', 'A password is required');
+            ->notEmpty('password');
 
         $validator
             ->requirePresence('role', 'create')
-            ->notEmpty('role', 'A role is required');
-
-        $validator
-            ->add('role', 'inList', [
-                'rule' => ['inList', ['admin', 'user']],
-                'message' => 'Please enter a valid role'
-            ]);
+            ->notEmpty('role');
 
         return $validator;
     }
@@ -85,4 +79,13 @@ class UsersTable extends Table
 
         return $rules;
     }
+
+    /**
+     *
+     */
+    public function getLastRegistered()
+    {
+        return $this->find()->order('created')->first();
+    }
+
 }
