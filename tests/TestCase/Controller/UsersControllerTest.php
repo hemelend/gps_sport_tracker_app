@@ -1,8 +1,10 @@
 <?php
 namespace App\Test\TestCase\Controller;
 
+
 use App\Controller\UsersController;
 use Cake\TestSuite\IntegrationTestCase;
+use Cake\ORM\TableRegistry;
 
 /**
  * App\Controller\UsersController Test Case
@@ -19,6 +21,15 @@ class UsersControllerTest extends IntegrationTestCase
         'app.users'
     ];
 
+    public function setUp() {
+        parent::setUp();
+    }
+
+    public function tearDown() {
+        parent::tearDown();
+        TableRegistry::clear();
+    }
+
     /**
      * Test index method
      *
@@ -27,6 +38,29 @@ class UsersControllerTest extends IntegrationTestCase
     public function testIndex()
     {
         $this->markTestIncomplete('Not implemented yet.');
+    }
+
+    /**
+     * @return void
+     */
+    public function testLogin() {
+        $this->get(['controller' => 'users', 'action' => 'login']);
+        $this->assertResponseCode(200);
+        $this->assertNoRedirect();
+    }
+
+    /**
+     * @return void
+     */
+    public function testLoginLoggedIn() {
+        $data = [
+            'Auth' => ['User' => ['id' => 1, 'role' => 'admin']]
+        ];
+        $this->session($data);
+        eval(breakpoint());
+        $this->get(['controller' => 'users', 'action' => 'login']);
+        $this->assertResponseCode(302);
+        $this->assertRedirect('/dashboard');
     }
 
     /**
@@ -47,28 +81,23 @@ class UsersControllerTest extends IntegrationTestCase
     public function testAdd()
     {
         // $this->markTestIncomplete('Not implemented yet.');
+        $this->enableCsrfToken();
+        $this->enableSecurityToken();
+
         $data = [
-            'id' => 1,
-            'username' => 'rrd@hhh.com',
+            // 'id' => '9999999',
+            'username' => 'tester@test.com',
             'password' => 'secret@123',
-            'role' => 'Admin',
+            'role' => 'admin',
             'created' => 1494383114,
             'modified' => 1494383114
         ];
-
-        $this->post('/user/add/', $data);
+        $this->post('/register', $data);
         $this->assertResponseSuccess();
 
         $users = TableRegistry::get('Users');
         $query = $users->find()->where(['username' => $data['username']]);
-        $this->assertEquals(1,$query->count());
-
-        // $result = $query->toArray();
-        // $poststags = TableRegistry::get('PostsTags');
-        // $query = $poststags->find()->where(['post_id' => $result[0]->id]);
-        // $result = $query->toArray();
-        // $this->assertEquals(1, $result[0]->tag_id);
-        // $this->assertEquals(2, $result[1]->tag_id);
+        $this->assertEquals(1, $query->count());
     }
 
     /**
@@ -96,10 +125,11 @@ class UsersControllerTest extends IntegrationTestCase
     {
         $this->enableCsrfToken();
         $this->enableSecurityToken();
-
-        $this->post('/users/login', ['username' => 'rrd@hhh.com', 'password' => 'secret@123']);
-        $expected = ['id' => 1, 'username' => 'rrd@hhh.com'];
-
+        // eval(breakpoint());
+        $result = $this->post('/login', ['username' => 'home@homecr.com', 'password' => 'secret@123']);
+        // eval(breakpoint());
+        $expected = ['username' => 'home@homecr.com'];
+        debug($result);
         $this->assertSession($expected, 'Auth.User');
 
         // $expected = [
@@ -115,7 +145,7 @@ class UsersControllerTest extends IntegrationTestCase
         $this->enableCsrfToken();
         $this->enableSecurityToken();
 
-        $this->post('/users/login', [
+        $this->post('/login', [
             'username' => 'wrong-username@hhh.com',
             'password' => 'wrong-password'
         ]);

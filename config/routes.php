@@ -56,6 +56,11 @@ Router::scope('/', function (RouteBuilder $routes) {
      */
     $routes->connect('/pages/*', ['controller' => 'Pages', 'action' => 'display']);
 
+    $routes->connect('/login', ['controller' => 'Users', 'action' => 'login']);
+    $routes->connect('/logout', ['controller' => 'Users', 'action' => 'logout']);
+    $routes->connect('/register', ['controller' => 'Users', 'action' => 'add']);
+    // $routes->connect('/users/:action', ['controller' => 'Users']);
+
     /**
      * Connect catchall routes for all controllers.
      *
@@ -72,7 +77,8 @@ Router::scope('/', function (RouteBuilder $routes) {
      * You can remove these routes once you've connected the
      * routes you want in your application.
      */
-    $routes->fallbacks(DashedRoute::class);
+    // $routes->fallbacks(DashedRoute::class);
+    $routes->fallbacks('InflectedRoute');
 });
 
 /**

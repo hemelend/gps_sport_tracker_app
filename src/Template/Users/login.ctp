@@ -86,19 +86,19 @@ form[role=login] {
       <?= $this->Flash->render() ?>
       <section class="login-form">
         <?= $this->Form->create() ?>
-          <img src="http://i.imgur.com/RcmcLv4.png" class="img-responsive" alt="" />
+          <!-- <img src="http://i.imgur.com/RcmcLv4.png" class="img-responsive" alt="" /> -->
           <?= $this->Form->control('email', ['label' => false, 'required' => true, 'type' => 'email',  'placeholder' => 'Email', 'class' => 'form-control input-lg']) ?>
           <?= $this->Form->control('password', ['label' => false,  'required' => true, 'type' => 'password',  'placeholder' => 'Password', 'class' => 'form-control input-lg']) ?>
           <div class="pwstrength_viewport_progress"></div>
           <?= $this->Form->button('Sign In', ['label' => false, 'type' => 'submit', 'class' => 'btn btn-lg btn-primary btn-block']) ?>
           <div>
-            <a href="#">Create account</a> or <a href="#">reset password</a>
+            <a href="/register">Create account</a> or <a href="#">reset password</a>
           </div>
 
         <?= $this->Form->end() ?>
 
         <div class="form-links">
-          <a href="#">www.website.com</a>
+          <a href="#">www.gpsstcr.com</a>
         </div>
       </section>
       </div>
@@ -107,13 +107,4 @@ form[role=login] {
 
 
   </div>
-
-  <p>
-    <a href="http://validator.w3.org/check?uri=http%3A%2F%2Fbootsnipp.com%2Fiframe%2FW00op" target="_blank"><small>HTML</small><sup>5</sup></a>
-    <br>
-    <br>
-
-  </p>
-
-
 </div>

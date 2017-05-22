@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for /Users/hemelend/Sites/gps_sport_tracker_app/src</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/nv.d3.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.min.js"></script>
+  <script src="js/respond.min.js"></script>
+  <![endif]-->
+ </head>
+ <body>
+  <header>
+   <div class="container">
+    <div class="row">
+     <div class="col-md-12">
+      <ol class="breadcrumb">
+        <li><a href="index.html">/Users/hemelend/Sites/gps_sport_tracker_app/src</a></li>
+        <li class="active">(Dashboard)</li>
+
+      </ol>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Console/Installer.php.html#25">Installer</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/PlayersTable.php.html#24">PlayersTable</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Shell/ConsoleShell.php.html#25">ConsoleShell</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/WeathersTable.php.html#22">WeathersTable</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/TracksTable.php.html#25">TracksTable</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/TrackpointsTable.php.html#23">TrackpointsTable</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/TeamsTable.php.html#22">TeamsTable</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/SpatialRefSysTable.php.html#20">SpatialRefSysTable</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/RasterOverviewsTable.php.html#20">RasterOverviewsTable</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/RasterColumnsTable.php.html#20">RasterColumnsTable</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/PositionsTable.php.html#22">PositionsTable</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/LegsTable.php.html#20">LegsTable</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/GeometryColumnsTable.php.html#20">GeometryColumnsTable</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/GeographyColumnsTable.php.html#20">GeographyColumnsTable</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/FixesTable.php.html#24">FixesTable</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/FieldsTable.php.html#24">FieldsTable</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/EventsTable.php.html#26">EventsTable</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/EventTypesTable.php.html#22">EventTypesTable</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/EquipmentsTable.php.html#22">EquipmentsTable</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/CitiesTable.php.html#22">CitiesTable</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Entity/User.php.html#17">User</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="View/AjaxView.php.html#26">AjaxView</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/UsersController.php.html#12">UsersController</a></td><td class="text-right">17%</td></tr>
+       <tr><td><a href="Model/Table/UsersTable.php.html#22">UsersTable</a></td><td class="text-right">38%</td></tr>
+       <tr><td><a href="Model/Table/SessionsTable.php.html#20">SessionsTable</a></td><td class="text-right">45%</td></tr>
+       <tr><td><a href="Controller/AppController.php.html#28">AppController</a></td><td class="text-right">76%</td></tr>
+       <tr><td><a href="Controller/PagesController.php.html#29">PagesController</a></td><td class="text-right">88%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Console/Installer.php.html#25">Installer</a></td><td class="text-right">462</td></tr>
+       <tr><td><a href="Controller/UsersController.php.html#12">UsersController</a></td><td class="text-right">143</td></tr>
+       <tr><td><a href="Shell/ConsoleShell.php.html#25">ConsoleShell</a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Controller/AppController.php.html#28">AppController</a></td><td class="text-right">8</td></tr>
+       <tr><td><a href="Controller/PagesController.php.html#29">PagesController</a></td><td class="text-right">8</td></tr>
+       <tr><td><a href="Model/Entity/User.php.html#17">User</a></td><td class="text-right">6</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Console/Installer.php.html#35"><abbr title="Installer::postInstall">postInstall</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/SpatialRefSysTable.php.html#44"><abbr title="SpatialRefSysTable::validationDefault">validationDefault</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/LegsTable.php.html#44"><abbr title="LegsTable::validationDefault">validationDefault</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/LegsTable.php.html#65"><abbr title="LegsTable::buildRules">buildRules</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/PlayersTable.php.html#33"><abbr title="PlayersTable::initialize">initialize</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/PlayersTable.php.html#60"><abbr title="PlayersTable::validationDefault">validationDefault</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/PlayersTable.php.html#98"><abbr title="PlayersTable::buildRules">buildRules</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/PositionsTable.php.html#31"><abbr title="PositionsTable::initialize">initialize</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/PositionsTable.php.html#50"><abbr title="PositionsTable::validationDefault">validationDefault</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/PositionsTable.php.html#71"><abbr title="PositionsTable::buildRules">buildRules</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/RasterColumnsTable.php.html#29"><abbr title="RasterColumnsTable::initialize">initialize</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/RasterColumnsTable.php.html#42"><abbr title="RasterColumnsTable::validationDefault">validationDefault</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/RasterOverviewsTable.php.html#29"><abbr title="RasterOverviewsTable::initialize">initialize</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/RasterOverviewsTable.php.html#42"><abbr title="RasterOverviewsTable::validationDefault">validationDefault</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/SessionsTable.php.html#44"><abbr title="SessionsTable::validationDefault">validationDefault</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/SpatialRefSysTable.php.html#29"><abbr title="SpatialRefSysTable::initialize">initialize</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/TeamsTable.php.html#31"><abbr title="TeamsTable::initialize">initialize</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/GeometryColumnsTable.php.html#42"><abbr title="GeometryColumnsTable::validationDefault">validationDefault</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/UsersTable.php.html#48"><abbr title="UsersTable::validationDefault">validationDefault</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Shell/ConsoleShell.php.html#67"><abbr title="ConsoleShell::getOptionParser">getOptionParser</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Shell/ConsoleShell.php.html#33"><abbr title="ConsoleShell::main">main</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/WeathersTable.php.html#71"><abbr title="WeathersTable::buildRules">buildRules</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/WeathersTable.php.html#50"><abbr title="WeathersTable::validationDefault">validationDefault</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/WeathersTable.php.html#31"><abbr title="WeathersTable::initialize">initialize</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/UsersTable.php.html#76"><abbr title="UsersTable::buildRules">buildRules</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/TracksTable.php.html#85"><abbr title="TracksTable::buildRules">buildRules</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/TeamsTable.php.html#51"><abbr title="TeamsTable::validationDefault">validationDefault</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/TracksTable.php.html#65"><abbr title="TracksTable::validationDefault">validationDefault</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/TracksTable.php.html#34"><abbr title="TracksTable::initialize">initialize</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/TrackpointsTable.php.html#137"><abbr title="TrackpointsTable::buildRules">buildRules</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/TrackpointsTable.php.html#56"><abbr title="TrackpointsTable::validationDefault">validationDefault</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/TrackpointsTable.php.html#32"><abbr title="TrackpointsTable::initialize">initialize</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/TeamsTable.php.html#76"><abbr title="TeamsTable::buildRules">buildRules</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/LegsTable.php.html#29"><abbr title="LegsTable::initialize">initialize</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/GeometryColumnsTable.php.html#29"><abbr title="GeometryColumnsTable::initialize">initialize</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Console/Installer.php.html#146"><abbr title="Installer::anonymous function">anonymous function</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/GeographyColumnsTable.php.html#42"><abbr title="GeographyColumnsTable::validationDefault">validationDefault</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Console/Installer.php.html#80"><abbr title="Installer::createAppConfig">createAppConfig</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Console/Installer.php.html#97"><abbr title="Installer::createWritableDirectories">createWritableDirectories</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Console/Installer.php.html#128"><abbr title="Installer::setFolderPermissions">setFolderPermissions</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Console/Installer.php.html#173"><abbr title="Installer::setSecuritySalt">setSecuritySalt</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/AppController.php.html#99"><abbr title="AppController::isAuthorized">isAuthorized</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/UsersController.php.html#29"><abbr title="UsersController::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/UsersController.php.html#44"><abbr title="UsersController::view">view</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/UsersController.php.html#59"><abbr title="UsersController::add">add</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/UsersController.php.html#82"><abbr title="UsersController::edit">edit</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/UsersController.php.html#107"><abbr title="UsersController::delete">delete</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/UsersController.php.html#139"><abbr title="UsersController::logout">logout</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Entity/User.php.html#44"><abbr title="User::_setPassword">_setPassword</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/CitiesTable.php.html#31"><abbr title="CitiesTable::initialize">initialize</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/CitiesTable.php.html#50"><abbr title="CitiesTable::validationDefault">validationDefault</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/EquipmentsTable.php.html#31"><abbr title="EquipmentsTable::initialize">initialize</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/EquipmentsTable.php.html#50"><abbr title="EquipmentsTable::validationDefault">validationDefault</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/GeographyColumnsTable.php.html#29"><abbr title="GeographyColumnsTable::initialize">initialize</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/FixesTable.php.html#54"><abbr title="FixesTable::validationDefault">validationDefault</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/FixesTable.php.html#33"><abbr title="FixesTable::initialize">initialize</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/FieldsTable.php.html#129"><abbr title="FieldsTable::buildRules">buildRules</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/FieldsTable.php.html#59"><abbr title="FieldsTable::validationDefault">validationDefault</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/FieldsTable.php.html#33"><abbr title="FieldsTable::initialize">initialize</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/EventsTable.php.html#126"><abbr title="EventsTable::buildRules">buildRules</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/EventsTable.php.html#70"><abbr title="EventsTable::validationDefault">validationDefault</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/EventsTable.php.html#35"><abbr title="EventsTable::initialize">initialize</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/EventTypesTable.php.html#71"><abbr title="EventTypesTable::buildRules">buildRules</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/EventTypesTable.php.html#50"><abbr title="EventTypesTable::validationDefault">validationDefault</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/EventTypesTable.php.html#31"><abbr title="EventTypesTable::initialize">initialize</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Table/EquipmentsTable.php.html#71"><abbr title="EquipmentsTable::buildRules">buildRules</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="View/AjaxView.php.html#43"><abbr title="AjaxView::initialize">initialize</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/UsersController.php.html#123"><abbr title="UsersController::login">login</abbr></a></td><td class="text-right">71%</td></tr>
+       <tr><td><a href="Controller/AppController.php.html#85"><abbr title="AppController::beforeRender">beforeRender</abbr></a></td><td class="text-right">75%</td></tr>
+       <tr><td><a href="Controller/PagesController.php.html#41"><abbr title="PagesController::display">display</abbr></a></td><td class="text-right">88%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Console/Installer.php.html#35"><abbr title="Installer::postInstall">postInstall</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="Console/Installer.php.html#128"><abbr title="Installer::setFolderPermissions">setFolderPermissions</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="Console/Installer.php.html#146"><abbr title="Installer::anonymous function">anonymous function</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Console/Installer.php.html#97"><abbr title="Installer::createWritableDirectories">createWritableDirectories</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Console/Installer.php.html#173"><abbr title="Installer::setSecuritySalt">setSecuritySalt</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Controller/AppController.php.html#99"><abbr title="AppController::isAuthorized">isAuthorized</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Controller/UsersController.php.html#59"><abbr title="UsersController::add">add</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Controller/UsersController.php.html#82"><abbr title="UsersController::edit">edit</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Controller/PagesController.php.html#41"><abbr title="PagesController::display">display</abbr></a></td><td class="text-right">8</td></tr>
+       <tr><td><a href="Console/Installer.php.html#80"><abbr title="Installer::createAppConfig">createAppConfig</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Controller/UsersController.php.html#107"><abbr title="UsersController::delete">delete</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Model/Entity/User.php.html#44"><abbr title="User::_setPassword">_setPassword</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Shell/ConsoleShell.php.html#33"><abbr title="ConsoleShell::main">main</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Controller/UsersController.php.html#123"><abbr title="UsersController::login">login</abbr></a></td><td class="text-right">3</td></tr>
+       <tr><td><a href="Controller/AppController.php.html#85"><abbr title="AppController::beforeRender">beforeRender</abbr></a></td><td class="text-right">3</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 4.0.8</a> using <a href="https://secure.php.net/" target="_top">PHP 7.1.5</a> with <a href="https://xdebug.org/">Xdebug 2.5.4</a> and <a href="https://phpunit.de/">PHPUnit 5.7.19</a> at Fri May 19 2:37:13 UTC 2017.</small>
+    </p>
+   </footer>
+  </div>
+  <script src="js/jquery.min.js" type="text/javascript"></script>
+  <script src="js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="js/holder.min.js" type="text/javascript"></script>
+  <script src="js/d3.min.js" type="text/javascript"></script>
+  <script src="js/nv.d3.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([22,0,1,0,1,1,0,0,1,1,0,22], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([67,0,0,0,0,0,0,0,2,1,0,12], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[100,1,"<a href=\"Application.php.html#29\">Application<\/a>"],[0,21,"<a href=\"Console\/Installer.php.html#25\">Installer<\/a>"],[76.47058823529412,8,"<a href=\"Controller\/AppController.php.html#28\">AppController<\/a>"],[100,4,"<a href=\"Controller\/ErrorController.php.html#24\">ErrorController<\/a>"],[88.23529411764706,8,"<a href=\"Controller\/PagesController.php.html#29\">PagesController<\/a>"],[17.02127659574468,15,"<a href=\"Controller\/UsersController.php.html#12\">UsersController<\/a>"],[100,0,"<a href=\"Model\/Entity\/City.php.html#16\">City<\/a>"],[100,0,"<a href=\"Model\/Entity\/Equipment.php.html#14\">Equipment<\/a>"],[100,0,"<a href=\"Model\/Entity\/Event.php.html#29\">Event<\/a>"],[100,0,"<a href=\"Model\/Entity\/EventType.php.html#14\">EventType<\/a>"],[100,0,"<a href=\"Model\/Entity\/Field.php.html#27\">Field<\/a>"],[100,0,"<a href=\"Model\/Entity\/Fix.php.html#17\">Fix<\/a>"],[100,0,"<a href=\"Model\/Entity\/GeographyColumn.php.html#17\">GeographyColumn<\/a>"],[100,0,"<a href=\"Model\/Entity\/GeometryColumn.php.html#17\">GeometryColumn<\/a>"],[100,0,"<a href=\"Model\/Entity\/Leg.php.html#12\">Leg<\/a>"],[100,0,"<a href=\"Model\/Entity\/Player.php.html#22\">Player<\/a>"],[100,0,"<a href=\"Model\/Entity\/Position.php.html#14\">Position<\/a>"],[100,0,"<a href=\"Model\/Entity\/RasterColumn.php.html#27\">RasterColumn<\/a>"],[100,0,"<a href=\"Model\/Entity\/RasterOverview.php.html#19\">RasterOverview<\/a>"],[100,0,"<a href=\"Model\/Entity\/Session.php.html#13\">Session<\/a>"],[100,0,"<a href=\"Model\/Entity\/SpatialRefSy.php.html#15\">SpatialRefSy<\/a>"],[100,0,"<a href=\"Model\/Entity\/Team.php.html#16\">Team<\/a>"],[100,0,"<a href=\"Model\/Entity\/Track.php.html#20\">Track<\/a>"],[100,0,"<a href=\"Model\/Entity\/Trackpoint.php.html#29\">Trackpoint<\/a>"],[0,2,"<a href=\"Model\/Entity\/User.php.html#17\">User<\/a>"],[100,0,"<a href=\"Model\/Entity\/Weather.php.html#14\">Weather<\/a>"],[0,2,"<a href=\"Model\/Table\/CitiesTable.php.html#22\">CitiesTable<\/a>"],[0,3,"<a href=\"Model\/Table\/EquipmentsTable.php.html#22\">EquipmentsTable<\/a>"],[0,3,"<a href=\"Model\/Table\/EventTypesTable.php.html#22\">EventTypesTable<\/a>"],[0,3,"<a href=\"Model\/Table\/EventsTable.php.html#26\">EventsTable<\/a>"],[0,3,"<a href=\"Model\/Table\/FieldsTable.php.html#24\">FieldsTable<\/a>"],[0,2,"<a href=\"Model\/Table\/FixesTable.php.html#24\">FixesTable<\/a>"],[0,2,"<a href=\"Model\/Table\/GeographyColumnsTable.php.html#20\">GeographyColumnsTable<\/a>"],[0,2,"<a href=\"Model\/Table\/GeometryColumnsTable.php.html#20\">GeometryColumnsTable<\/a>"],[0,3,"<a href=\"Model\/Table\/LegsTable.php.html#20\">LegsTable<\/a>"],[0,3,"<a href=\"Model\/Table\/PlayersTable.php.html#24\">PlayersTable<\/a>"],[0,3,"<a href=\"Model\/Table\/PositionsTable.php.html#22\">PositionsTable<\/a>"],[0,2,"<a href=\"Model\/Table\/RasterColumnsTable.php.html#20\">RasterColumnsTable<\/a>"],[0,2,"<a href=\"Model\/Table\/RasterOverviewsTable.php.html#20\">RasterOverviewsTable<\/a>"],[45.45454545454545,2,"<a href=\"Model\/Table\/SessionsTable.php.html#20\">SessionsTable<\/a>"],[0,2,"<a href=\"Model\/Table\/SpatialRefSysTable.php.html#20\">SpatialRefSysTable<\/a>"],[0,3,"<a href=\"Model\/Table\/TeamsTable.php.html#22\">TeamsTable<\/a>"],[0,3,"<a href=\"Model\/Table\/TrackpointsTable.php.html#23\">TrackpointsTable<\/a>"],[0,3,"<a href=\"Model\/Table\/TracksTable.php.html#25\">TracksTable<\/a>"],[38.88888888888889,4,"<a href=\"Model\/Table\/UsersTable.php.html#22\">UsersTable<\/a>"],[0,3,"<a href=\"Model\/Table\/WeathersTable.php.html#22\">WeathersTable<\/a>"],[0,3,"<a href=\"Shell\/ConsoleShell.php.html#25\">ConsoleShell<\/a>"],[0,1,"<a href=\"View\/AjaxView.php.html#26\">AjaxView<\/a>"],[100,1,"<a href=\"View\/AppView.php.html#25\">AppView<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[100,1,"<a href=\"Application.php.html#37\">Application::middleware<\/a>"],[0,5,"<a href=\"Console\/Installer.php.html#35\">Installer::postInstall<\/a>"],[0,3,"<a href=\"Console\/Installer.php.html#146\">Installer::anonymous function<\/a>"],[0,2,"<a href=\"Console\/Installer.php.html#80\">Installer::createAppConfig<\/a>"],[0,3,"<a href=\"Console\/Installer.php.html#97\">Installer::createWritableDirectories<\/a>"],[0,5,"<a href=\"Console\/Installer.php.html#128\">Installer::setFolderPermissions<\/a>"],[0,3,"<a href=\"Console\/Installer.php.html#173\">Installer::setSecuritySalt<\/a>"],[100,1,"<a href=\"Controller\/AppController.php.html#40\">AppController::initialize<\/a>"],[75,3,"<a href=\"Controller\/AppController.php.html#85\">AppController::beforeRender<\/a>"],[100,1,"<a href=\"Controller\/AppController.php.html#94\">AppController::beforeFilter<\/a>"],[0,3,"<a href=\"Controller\/AppController.php.html#99\">AppController::isAuthorized<\/a>"],[100,1,"<a href=\"Controller\/ErrorController.php.html#31\">ErrorController::initialize<\/a>"],[100,1,"<a href=\"Controller\/ErrorController.php.html#42\">ErrorController::beforeFilter<\/a>"],[100,1,"<a href=\"Controller\/ErrorController.php.html#52\">ErrorController::beforeRender<\/a>"],[100,1,"<a href=\"Controller\/ErrorController.php.html#65\">ErrorController::afterFilter<\/a>"],[88.23529411764706,8,"<a href=\"Controller\/PagesController.php.html#41\">PagesController::display<\/a>"],[100,1,"<a href=\"Controller\/UsersController.php.html#15\">UsersController::beforeFilter<\/a>"],[0,1,"<a href=\"Controller\/UsersController.php.html#29\">UsersController::index<\/a>"],[0,1,"<a href=\"Controller\/UsersController.php.html#44\">UsersController::view<\/a>"],[0,3,"<a href=\"Controller\/UsersController.php.html#59\">UsersController::add<\/a>"],[0,3,"<a href=\"Controller\/UsersController.php.html#82\">UsersController::edit<\/a>"],[0,2,"<a href=\"Controller\/UsersController.php.html#107\">UsersController::delete<\/a>"],[71.42857142857143,3,"<a href=\"Controller\/UsersController.php.html#123\">UsersController::login<\/a>"],[0,1,"<a href=\"Controller\/UsersController.php.html#139\">UsersController::logout<\/a>"],[0,2,"<a href=\"Model\/Entity\/User.php.html#44\">User::_setPassword<\/a>"],[0,1,"<a href=\"Model\/Table\/CitiesTable.php.html#31\">CitiesTable::initialize<\/a>"],[0,1,"<a href=\"Model\/Table\/CitiesTable.php.html#50\">CitiesTable::validationDefault<\/a>"],[0,1,"<a href=\"Model\/Table\/EquipmentsTable.php.html#31\">EquipmentsTable::initialize<\/a>"],[0,1,"<a href=\"Model\/Table\/EquipmentsTable.php.html#50\">EquipmentsTable::validationDefault<\/a>"],[0,1,"<a href=\"Model\/Table\/EquipmentsTable.php.html#71\">EquipmentsTable::buildRules<\/a>"],[0,1,"<a href=\"Model\/Table\/EventTypesTable.php.html#31\">EventTypesTable::initialize<\/a>"],[0,1,"<a href=\"Model\/Table\/EventTypesTable.php.html#50\">EventTypesTable::validationDefault<\/a>"],[0,1,"<a href=\"Model\/Table\/EventTypesTable.php.html#71\">EventTypesTable::buildRules<\/a>"],[0,1,"<a href=\"Model\/Table\/EventsTable.php.html#35\">EventsTable::initialize<\/a>"],[0,1,"<a href=\"Model\/Table\/EventsTable.php.html#70\">EventsTable::validationDefault<\/a>"],[0,1,"<a href=\"Model\/Table\/EventsTable.php.html#126\">EventsTable::buildRules<\/a>"],[0,1,"<a href=\"Model\/Table\/FieldsTable.php.html#33\">FieldsTable::initialize<\/a>"],[0,1,"<a href=\"Model\/Table\/FieldsTable.php.html#59\">FieldsTable::validationDefault<\/a>"],[0,1,"<a href=\"Model\/Table\/FieldsTable.php.html#129\">FieldsTable::buildRules<\/a>"],[0,1,"<a href=\"Model\/Table\/FixesTable.php.html#33\">FixesTable::initialize<\/a>"],[0,1,"<a href=\"Model\/Table\/FixesTable.php.html#54\">FixesTable::validationDefault<\/a>"],[0,1,"<a href=\"Model\/Table\/GeographyColumnsTable.php.html#29\">GeographyColumnsTable::initialize<\/a>"],[0,1,"<a href=\"Model\/Table\/GeographyColumnsTable.php.html#42\">GeographyColumnsTable::validationDefault<\/a>"],[0,1,"<a href=\"Model\/Table\/GeometryColumnsTable.php.html#29\">GeometryColumnsTable::initialize<\/a>"],[0,1,"<a href=\"Model\/Table\/GeometryColumnsTable.php.html#42\">GeometryColumnsTable::validationDefault<\/a>"],[0,1,"<a href=\"Model\/Table\/LegsTable.php.html#29\">LegsTable::initialize<\/a>"],[0,1,"<a href=\"Model\/Table\/LegsTable.php.html#44\">LegsTable::validationDefault<\/a>"],[0,1,"<a href=\"Model\/Table\/LegsTable.php.html#65\">LegsTable::buildRules<\/a>"],[0,1,"<a href=\"Model\/Table\/PlayersTable.php.html#33\">PlayersTable::initialize<\/a>"],[0,1,"<a href=\"Model\/Table\/PlayersTable.php.html#60\">PlayersTable::validationDefault<\/a>"],[0,1,"<a href=\"Model\/Table\/PlayersTable.php.html#98\">PlayersTable::buildRules<\/a>"],[0,1,"<a href=\"Model\/Table\/PositionsTable.php.html#31\">PositionsTable::initialize<\/a>"],[0,1,"<a href=\"Model\/Table\/PositionsTable.php.html#50\">PositionsTable::validationDefault<\/a>"],[0,1,"<a href=\"Model\/Table\/PositionsTable.php.html#71\">PositionsTable::buildRules<\/a>"],[0,1,"<a href=\"Model\/Table\/RasterColumnsTable.php.html#29\">RasterColumnsTable::initialize<\/a>"],[0,1,"<a href=\"Model\/Table\/RasterColumnsTable.php.html#42\">RasterColumnsTable::validationDefault<\/a>"],[0,1,"<a href=\"Model\/Table\/RasterOverviewsTable.php.html#29\">RasterOverviewsTable::initialize<\/a>"],[0,1,"<a href=\"Model\/Table\/RasterOverviewsTable.php.html#42\">RasterOverviewsTable::validationDefault<\/a>"],[100,1,"<a href=\"Model\/Table\/SessionsTable.php.html#29\">SessionsTable::initialize<\/a>"],[0,1,"<a href=\"Model\/Table\/SessionsTable.php.html#44\">SessionsTable::validationDefault<\/a>"],[0,1,"<a href=\"Model\/Table\/SpatialRefSysTable.php.html#29\">SpatialRefSysTable::initialize<\/a>"],[0,1,"<a href=\"Model\/Table\/SpatialRefSysTable.php.html#44\">SpatialRefSysTable::validationDefault<\/a>"],[0,1,"<a href=\"Model\/Table\/TeamsTable.php.html#31\">TeamsTable::initialize<\/a>"],[0,1,"<a href=\"Model\/Table\/TeamsTable.php.html#51\">TeamsTable::validationDefault<\/a>"],[0,1,"<a href=\"Model\/Table\/TeamsTable.php.html#76\">TeamsTable::buildRules<\/a>"],[0,1,"<a href=\"Model\/Table\/TrackpointsTable.php.html#32\">TrackpointsTable::initialize<\/a>"],[0,1,"<a href=\"Model\/Table\/TrackpointsTable.php.html#56\">TrackpointsTable::validationDefault<\/a>"],[0,1,"<a href=\"Model\/Table\/TrackpointsTable.php.html#137\">TrackpointsTable::buildRules<\/a>"],[0,1,"<a href=\"Model\/Table\/TracksTable.php.html#34\">TracksTable::initialize<\/a>"],[0,1,"<a href=\"Model\/Table\/TracksTable.php.html#65\">TracksTable::validationDefault<\/a>"],[0,1,"<a href=\"Model\/Table\/TracksTable.php.html#85\">TracksTable::buildRules<\/a>"],[100,1,"<a href=\"Model\/Table\/UsersTable.php.html#31\">UsersTable::initialize<\/a>"],[0,1,"<a href=\"Model\/Table\/UsersTable.php.html#48\">UsersTable::validationDefault<\/a>"],[0,1,"<a href=\"Model\/Table\/UsersTable.php.html#76\">UsersTable::buildRules<\/a>"],[100,1,"<a href=\"Model\/Table\/UsersTable.php.html#86\">UsersTable::getLastRegistered<\/a>"],[0,1,"<a href=\"Model\/Table\/WeathersTable.php.html#31\">WeathersTable::initialize<\/a>"],[0,1,"<a href=\"Model\/Table\/WeathersTable.php.html#50\">WeathersTable::validationDefault<\/a>"],[0,1,"<a href=\"Model\/Table\/WeathersTable.php.html#71\">WeathersTable::buildRules<\/a>"],[0,2,"<a href=\"Shell\/ConsoleShell.php.html#33\">ConsoleShell::main<\/a>"],[0,1,"<a href=\"Shell\/ConsoleShell.php.html#67\">ConsoleShell::getOptionParser<\/a>"],[0,1,"<a href=\"View\/AjaxView.php.html#43\">AjaxView::initialize<\/a>"],[100,1,"<a href=\"View\/AppView.php.html#37\">AppView::initialize<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>

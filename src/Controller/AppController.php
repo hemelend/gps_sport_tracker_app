@@ -52,7 +52,23 @@ class AppController extends Controller
                 'controller' => 'Pages',
                 'action' => 'display',
                 'home'
-            ]
+            ],
+            'authenticate' => [
+                'Form' => [
+                    'fields' => [
+                        'username' => 'username',
+                        'password' => 'password'
+                    ]
+                ]
+            ],
+            'loginAction' => [
+                'controller' => 'Users',
+                'action' => 'login',
+                // 'plugin' => 'Users'
+            ],
+            'authorize' => 'Controller',
+            'unauthorizedRedirect' => $this->referer(), // If unauthorized, return them to page they were just on
+            'storage' => 'Session'
         ]);
 
         /*
@@ -80,19 +96,33 @@ class AppController extends Controller
 
     public function beforeFilter(Event $event)
     {
-        $this->Auth->allow(['display']);
+        $this->Auth->allow(['display', 'register']);
+        // Do not allow access to these public actions when already logged in
+        $allowed = ['Users' => ['login','lost_password', 'register']];
+
+        // if (!$this->AuthUser->id()) {
+        //     return null;
+        // }
+        // eval(breakpoint());
+
+        foreach ($allowed as $controller => $actions) {
+            if ($this->name === $controller && in_array($this->request->action, $actions)) {
+                $this->Flash->info('The page you tried to access is not relevant if you are already logged in. Redirected to main page.');
+                return $this->redirect($this->Auth->config('loginRedirect'));
+            }
+        }
     }
 
     public function isAuthorized($user)
-{
-    // Admin can access every action
-    if (isset($user['role']) && $user['role'] === 'admin') {
-        return true;
-    }
+    {
+        // Admin can access every action
+        if (isset($user['role']) && $user['role'] === 'admin') {
+            return true;
+        }
 
-    // Default deny
-    return false;
-}
+        // Default deny
+        return false;
+    }
 
     // Bootstrap Frameworks
     public $helpers = [
