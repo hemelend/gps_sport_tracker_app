@@ -52,7 +52,21 @@ class AppController extends Controller
                 'controller' => 'Pages',
                 'action' => 'display',
                 'home'
-            ]
+            ],
+            'authenticate' => [
+                'Form' => [
+                    'fields' => [
+                        'username' => 'username',
+                        'password' => 'password'
+                    ]
+                ]
+            ],
+            'loginAction' => [
+                'controller' => 'users',
+                'action' => 'login'
+            ],
+            'authorize' => 'Controller',
+            'unauthorizedRedirect' => $this->referer() // If unauthorized, return them to page they were just on
         ]);
 
         /*
@@ -81,18 +95,29 @@ class AppController extends Controller
     public function beforeFilter(Event $event)
     {
         $this->Auth->allow(['display']);
+        // Do not allow access to these public actions when already logged in
+        $allowed = ['Users' => ['login', 'lost_password', 'register']];
+        // if (!$this->AuthUser->id()) {
+        //     return null;
+        // }
+        foreach ($allowed as $controller => $actions) {
+            if ($this->name === $controller && in_array($this->request->action, $actions)) {
+                $this->Flash->info('The page you tried to access is not relevant if you are already logged in. Redirected to main page.');
+                return $this->redirect($this->Auth->config('loginRedirect'));
+            }
+        }
     }
 
     public function isAuthorized($user)
-{
-    // Admin can access every action
-    if (isset($user['role']) && $user['role'] === 'admin') {
-        return true;
-    }
+    {
+        // Admin can access every action
+        if (isset($user['role']) && $user['role'] === 'admin') {
+            return true;
+        }
 
-    // Default deny
-    return false;
-}
+        // Default deny
+        return false;
+    }
 
     // Bootstrap Frameworks
     public $helpers = [

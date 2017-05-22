@@ -2,7 +2,7 @@
 namespace App\Test\Fixture;
 
 use Cake\TestSuite\Fixture\TestFixture;
-
+use Cake\Auth\DefaultPasswordHasher;
 /**
  * UsersFixture
  *
@@ -36,10 +36,10 @@ class UsersFixture extends TestFixture
      */
     public $records = [
         [
-            'id' => 1,
-            'username' => 'rrd',
-            'password' => 'Lorem ipsum dolor sit amet',
-            'role' => 'Lorem ipsum dolor ',
+            // 'id' => 1,
+            'username' => 'rrd@hhh.com',
+            'password' => 'secret@123',
+            'role' => 'admin',
             'created' => 1494383114,
             'modified' => 1494383114
         ],

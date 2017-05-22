@@ -87,7 +87,7 @@ class UsersTableTest extends TestCase
      */
     public function testIfWeGetRrdAsLastRegisteredUser(){
         $actual = $this->Users->getLastRegistered();
-        $expected = 'rrd';
+        $expected = 'rrd@hhh.com';
         $this->assertEquals($expected,$actual->username);
     }
 }
