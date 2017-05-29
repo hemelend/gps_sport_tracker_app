@@ -62,21 +62,13 @@ class AppController extends Controller
                 ]
             ],
             'loginAction' => [
-<<<<<<< HEAD
                 'controller' => 'Users',
                 'action' => 'login',
-                // 'plugin' => 'Users'
+                'plugin' => 'Users'
             ],
             'authorize' => 'Controller',
             'unauthorizedRedirect' => $this->referer(), // If unauthorized, return them to page they were just on
             'storage' => 'Session'
-=======
-                'controller' => 'users',
-                'action' => 'login'
-            ],
-            'authorize' => 'Controller',
-            'unauthorizedRedirect' => $this->referer() // If unauthorized, return them to page they were just on
->>>>>>> 260e7dd73e2361e5ecf269e6fce2b4481a17a5a6
         ]);
 
         /*
@@ -104,7 +96,6 @@ class AppController extends Controller
 
     public function beforeFilter(Event $event)
     {
-<<<<<<< HEAD
         $this->Auth->allow(['display', 'register']);
         // Do not allow access to these public actions when already logged in
         $allowed = ['Users' => ['login','lost_password', 'register']];
@@ -114,14 +105,6 @@ class AppController extends Controller
         // }
         // eval(breakpoint());
 
-=======
-        $this->Auth->allow(['display']);
-        // Do not allow access to these public actions when already logged in
-        $allowed = ['Users' => ['login', 'lost_password', 'register']];
-        // if (!$this->AuthUser->id()) {
-        //     return null;
-        // }
->>>>>>> 260e7dd73e2361e5ecf269e6fce2b4481a17a5a6
         foreach ($allowed as $controller => $actions) {
             if ($this->name === $controller && in_array($this->request->action, $actions)) {
                 $this->Flash->info('The page you tried to access is not relevant if you are already logged in. Redirected to main page.');
