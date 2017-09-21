@@ -56,7 +56,7 @@ class AppController extends Controller
             'authenticate' => [
                 'Form' => [
                     'fields' => [
-                        'username' => 'username',
+                        'username' => 'email',
                         'password' => 'password'
                     ]
                 ]
@@ -64,7 +64,7 @@ class AppController extends Controller
             'loginAction' => [
                 'controller' => 'Users',
                 'action' => 'login',
-                'plugin' => 'Users'
+                // 'plugin' => false
             ],
             'authorize' => 'Controller',
             'unauthorizedRedirect' => $this->referer(), // If unauthorized, return them to page they were just on
@@ -92,13 +92,14 @@ class AppController extends Controller
         ) {
             $this->set('_serialize', true);
         }
+        $this->viewBuilder()->theme('AdminLTE');
     }
 
     public function beforeFilter(Event $event)
     {
         $this->Auth->allow(['display', 'register']);
         // Do not allow access to these public actions when already logged in
-        $allowed = ['Users' => ['login','lost_password', 'register']];
+        $allowed = ['Users' => ['lost_password', 'register']];
 
         // if (!$this->AuthUser->id()) {
         //     return null;

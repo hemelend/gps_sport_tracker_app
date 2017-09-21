@@ -224,3 +224,5 @@ if (Configure::read('debug')) {
 Plugin::load('Migrations');
 
 Plugin::load('Bootstrap');
+
+Plugin::load('AdminLTE', ['bootstrap' => true, 'routes' => true]);

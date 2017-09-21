@@ -127,9 +127,9 @@ class UsersControllerTest extends IntegrationTestCase
         $this->enableSecurityToken();
         // eval(breakpoint());
         $result = $this->post('/login', ['username' => 'home@homecr.com', 'password' => 'secret@123']);
-        // eval(breakpoint());
+        eval(breakpoint());
         $expected = ['username' => 'home@homecr.com'];
-        debug($result);
+        // debug($result);
         $this->assertSession($expected, 'Auth.User');
 
         // $expected = [
