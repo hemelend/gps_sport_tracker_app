@@ -57,7 +57,7 @@ class UsersControllerTest extends IntegrationTestCase
             'Auth' => ['User' => ['id' => 1, 'role' => 'admin']]
         ];
         $this->session($data);
-        eval(breakpoint());
+        // eval(breakpoint());
         $this->get(['controller' => 'users', 'action' => 'login']);
         $this->assertResponseCode(302);
         $this->assertRedirect('/dashboard');
@@ -126,10 +126,10 @@ class UsersControllerTest extends IntegrationTestCase
         $this->enableCsrfToken();
         $this->enableSecurityToken();
         // eval(breakpoint());
-        $result = $this->post('/login', ['username' => 'home@homecr.com', 'password' => 'secret@123']);
+        $result = $this->post('/login', ['email' => 'home@homecr.com', 'password' => 'secret@123']);
         eval(breakpoint());
-        $expected = ['username' => 'home@homecr.com'];
-        // debug($result);
+        $expected = ['email' => 'home@homecr.com'];
+        debug($result);
         $this->assertSession($expected, 'Auth.User');
 
         // $expected = [

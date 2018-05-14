@@ -80,7 +80,7 @@ $cakeDescription = 'GPS Sports Tracker -- v0.1';
         <ul class="we-create animated fadeInUp delay-1s">
             <li>We are a digital company that loves helping athlets to improve their physical conditions.</li>
         </ul>
-            <a class="link animated fadeInUp delay-1s servicelink" href="#service">Get Started</a>
+            <a class="link animated fadeInUp delay-1s servicelink" href="login">Get Started</a>
     </div>
 </header><!--header-end-->
 

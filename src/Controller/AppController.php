@@ -45,7 +45,7 @@ class AppController extends Controller
         $this->loadComponent('Flash');
         $this->loadComponent('Auth', [
             'loginRedirect' => [
-                'controller' => 'Dashboard',
+                'controller' => 'dashboard',
                 'action' => 'index'
             ],
             'logoutRedirect' => [
@@ -93,6 +93,8 @@ class AppController extends Controller
             $this->set('_serialize', true);
         }
         $this->viewBuilder()->theme('AdminLTE');
+        $this->viewBuilder()->className('AdminLTE.AdminLTE');
+
     }
 
     public function beforeFilter(Event $event)
@@ -112,6 +114,8 @@ class AppController extends Controller
                 return $this->redirect($this->Auth->config('loginRedirect'));
             }
         }
+
+
     }
 
     public function isAuthorized($user)
@@ -127,9 +131,9 @@ class AppController extends Controller
 
     // Bootstrap Frameworks
     public $helpers = [
-        'Form' => [
-            'className' => 'Bootstrap.Form'
-        ],
+        // 'Form' => [
+        //     'className' => 'Bootstrap.Form'
+        // ],
         'Html' => [
             'className' => 'Bootstrap.Html'
         ],

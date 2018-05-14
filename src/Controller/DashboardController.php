@@ -10,7 +10,7 @@ use App\Controller\AppController;
  */
 class DashboardController extends AppController
 {
-
+    // var $uses = null;
     /**
      * Index method
      *
@@ -18,10 +18,10 @@ class DashboardController extends AppController
      */
     public function index()
     {
-        $dashboard = $this->paginate($this->Dashboard);
+        // $dashboard = $this->paginate($this->Dashboard);
 
-        $this->set(compact('dashboard'));
-        $this->set('_serialize', ['dashboard']);
+        // $this->set(compact('dashboard'));
+        // $this->set('_serialize', ['dashboard']);
     }
 
     /**
